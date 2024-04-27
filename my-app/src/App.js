@@ -1,29 +1,27 @@
+import { useState, useEffect } from "react";
+
 function App() {
-  const userInfo = [
-    {
-      username: "well",
-      email: "textwell@gmail.com",
-      location: "ghana",
-    },
-    {
-      username: "mine",
-      email: "mine@gmail.com",
-      location: "uk",
-    },
-    {
-      username: "well",
-      email: "wellwell@gmail.com",
-      location: "America",
-    },
-  ];
+  const [data, setData] = useState([]);
+
+  // 1. Render for the (first time)
+  useEffect(() => {
+    async function getData() {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts",
+      );
+      const data = await response.json();
+      if (data && data.length) setData(data);
+    }
+    getData();
+  }, []);
+
   return (
     <>
-      {userInfo.map((info) => (
-        <ul key={Math.random() * 2}>
-          <li>{info.username}</li>
-          <li>{info.email}</li>
-        </ul>
-      ))}
+      <ul>
+        {data.map((item) => (
+          <li key={Math.random()}>{item.title}</li>
+        ))}
+      </ul>
     </>
   );
 }
