@@ -1,11 +1,9 @@
-let password;
+const person = {
+  firstName: "Emmanuel",
+  lastName: "Webdev",
+  age: 19,
+  location: ["Planet", "Earth"],
+  isProgrammer: true,
+};
 
-if (password === 8) {
-  console.log("Welcome");
-} else if (password <= 8) {
-  console.log("Password is too short");
-} else if (password >= 8) {
-  console.log("Password too long");
-} else {
-  console.log("please provide password");
-}
+console.log(person.firstName.length);
