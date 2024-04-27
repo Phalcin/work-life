@@ -1,5 +1,11 @@
+import Add from "./Add";
+
 function App() {
-  return <h1>This is react</h1>;
+  return (
+    <section>
+      <Add />
+    </section>
+  );
 }
 
 export default App;
