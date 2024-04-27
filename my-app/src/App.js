@@ -1,15 +1,29 @@
-import Add from "./Add";
-
-const myName = "Emmanuel";
-const multiply = (a, b) => a * b;
-const specialClass = "simple-class";
-
 function App() {
+  const userInfo = [
+    {
+      username: "well",
+      email: "textwell@gmail.com",
+      location: "ghana",
+    },
+    {
+      username: "mine",
+      email: "mine@gmail.com",
+      location: "uk",
+    },
+    {
+      username: "well",
+      email: "wellwell@gmail.com",
+      location: "America",
+    },
+  ];
   return (
     <>
-      <h1>{myName}</h1>
-      <p>{2 + 2}</p>
-      <p>My friends list: {["Alex", " John", " Jordan"]}</p>
+      {userInfo.map((info) => (
+        <ul key={Math.random() * 2}>
+          <li>{info.username}</li>
+          <li>{info.email}</li>
+        </ul>
+      ))}
     </>
   );
 }
