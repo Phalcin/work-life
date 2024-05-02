@@ -1,5 +1,6 @@
-function greet(person: string = "Morning") {
-  return `Good morning ${person}`;
+function double1(x: number): number {
+  return x * x;
 }
-const res = greet();
+
+const res = double1(2);
 console.log(res);
