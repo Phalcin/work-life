@@ -17,3 +17,6 @@ function printUser(): { name: string; age: number; location: string } {
 }
 
 const res = printUser();
+// the cave of adulam global
+
+// Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser.
