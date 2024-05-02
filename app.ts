@@ -1,3 +1,19 @@
-const singleDi: number[] = [1, 2, 3, 4, 5];
-const multiDi: number[][] = [[1, 2, 3, 4]];
-const triple: number[][][] = [[[1, 2, 3, 4, 5]]];
+const person: { firstName: string; lastName: string; age: number } = {
+  firstName: "Emmanuel",
+  lastName: "Mensah",
+  age: 20,
+};
+
+console.log(
+  `My name is ${person.firstName} ${person.lastName} and i am ${person.age} years old`,
+);
+
+function printUser(): { name: string; age: number; location: string } {
+  return {
+    name: "Emmanuel",
+    age: 20,
+    location: "China",
+  };
+}
+
+const res = printUser();
