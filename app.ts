@@ -1,3 +1,4 @@
-let x: string;
-x = "Emmanuel";
-console.log(x);
+const items: string[] = [];
+
+items.push("keyboard");
+console.log(items);
