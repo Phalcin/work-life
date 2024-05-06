@@ -1,22 +1,14 @@
-let password: string | number | boolean = true;
+class myClass {
+  private _myProperty: number = 0;
 
-type UserInfo = {
-  first: string;
-  last: string;
-  age: number;
-};
+  get myProperty(): number {
+    return this._myProperty;
+  }
 
-type AccountDetails = {
-  email: string;
-  password: string;
-};
+  set myProperty(value: number) {
+    this._myProperty = value;
+  }
+}
 
-let user: UserInfo | AccountDetails = {
-  email: "Emmanuelhexer@gmail.com",
-  password: "well123",
-};
-
-// Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser.
-
-// Env
-// controlling the behaviour of the software
+const myInstance = new myClass();
+console.log(`Current Value : ${myInstance.myProperty}`);
