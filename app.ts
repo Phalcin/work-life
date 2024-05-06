@@ -1,23 +1,20 @@
-const person: { firstName: string; lastName: string; age: number } = {
-  firstName: "Emmanuel",
-  lastName: "Mensah",
-  age: 20,
+let password: string | number | boolean = true;
+
+type UserInfo = {
+  first: string;
+  last: string;
+  age: number;
 };
 
-console.log(
-  `My name is ${person.firstName} ${person.lastName} and i am ${person.age} years old`,
-);
+type AccountDetails = {
+  email: string;
+  password: string;
+};
 
-function printUser(): { name: string; age: number; location: string } {
-  return {
-    name: "Emmanuel",
-    age: 20,
-    location: "China",
-  };
-}
-
-const res = printUser();
-// the cave of adulam global
+let user: UserInfo | AccountDetails = {
+  email: "Emmanuelhexer@gmail.com",
+  password: "well123",
+};
 
 // Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser.
 
