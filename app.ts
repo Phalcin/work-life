@@ -1,14 +1,15 @@
-class myClass {
-  private _myProperty: number = 0;
-
-  get myProperty(): number {
-    return this._myProperty;
-  }
-
-  set myProperty(value: number) {
-    this._myProperty = value;
-  }
+interface Song {
+  songName: string;
+  singerName: string;
+  printSongInfo(songName: string, singerName: string): string;
 }
 
-const myInstance = new myClass();
-console.log(`Current Value : ${myInstance.myProperty}`);
+const song1: Song = {
+  songName: "Natural",
+  singerName: "Imagine Dragon",
+  printSongInfo: (songName, singerName) => {
+    return `Song: ${songName}, Singer: ${singerName}`;
+  },
+};
+console.log(song1.printSongInfo("Natural", "imagine Dragon"));
+console.log(song1.songName);
